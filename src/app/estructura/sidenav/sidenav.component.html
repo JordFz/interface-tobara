@@ -1,0 +1,29 @@
+<mat-nav-list>
+    <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+    <div  [class.color-secundario]="isExpanded">
+            <mat-list-item  >
+                    <button  mat-icon-button (click)="isExpanded = !isExpanded">
+                        <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+                        <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item *ngIf="isExpanded"  >
+                    <div id="mi-presentacion" matLine >
+                        <div matLine id="mi-avatar">
+                                <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" class="mat-card-avatar" alt="">
+                        </div>
+                        
+                        <strong>Jordan Fernandez cruz</strong>  <br>
+                        <span matLine>ing.jordanfz@gmail.com</span>
+                        <span matLine>Administrador</span>
+                    </div>
+                </mat-list-item>
+    </div>
+    
+
+    <mat-list-item>
+
+        <mat-icon mat-list-icon>home</mat-icon>
+        <p matLine *ngIf="isExpanded">Home               </p>
+    </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,27 @@
+mat-list-item{
+    color: red;
+    padding: 10px;
+}
+#mi-presentacion{
+    display: block;
+}
+
+mat-nav-list{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#mi-presentacion .mat-card-avatar{
+    width: 80px !important;
+    height: 80px;
+    position: relative;
+}
+
+.mat-nav-list .color-secundario .mat-list-item {
+   background: #FFB74D !important;
+   color: #263238;
+   margin-right: 50px;
+}
+#mi-avatar{
+    padding: 5px;
+}

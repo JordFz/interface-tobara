@@ -1,0 +1,26 @@
+<div class="example-container">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button id="btn-menu" mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="principal">
+                Chinebrin wapo  <span class="fecha" *ngIf="mostrarFecha"> {{fecha | date:'short'}} </span>
+        </div>    
+        <span class="example-spacer"></span>            
+                    
+        
+        <app-menu></app-menu>
+        
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <app-sidenav></app-sidenav>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <app-contenido></app-contenido>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
